@@ -2,7 +2,7 @@ import path from 'node:path';
 import process from 'node:process';
 import {config} from 'dotenv';
 import {PrismaClient} from '@prisma/client';
-import {hashSync} from 'bcryptjs';
+import {hashSync} from 'bcrypt';
 
 config({
   path: path.resolve(process.cwd(), '../../.env'),

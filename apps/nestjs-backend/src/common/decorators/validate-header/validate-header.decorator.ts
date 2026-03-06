@@ -97,7 +97,7 @@ function validateHeaderValue(
   }
 
   // String or array validation
-  const expectedValues = Array.isArray(expectedValue) ? expectedValue : [expectedValue];
+  const expectedValues = Array.isArray(expectedValue) ? expectedValue.map(String) : [String(expectedValue)];
 
   return headerValues.some((headerVal) =>
     expectedValues.some((expectedVal) =>
